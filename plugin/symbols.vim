@@ -6,6 +6,7 @@
 " ------------------------------------------------------------------------------
 
 let g:symbols_dir = 'symbols'
+let g:default_symbol_set = 'default'
 
 command! -nargs=? -complete=custom,symbols#completeSets Symbols call symbols#load(<args>)
 command! SymbolsList call symbols#list()

@@ -18,7 +18,7 @@ autocmd InsertLeave * let &iskeyword = s:iskeyword
 autocmd CompleteDone * let &iskeyword = s:iskeyword
 
 function! symbols#load(...)
-  let name = get(a:, '1', 'default')
+  let name = get(a:, '1', g:default_symbol_set)
   let s:symbols = []
 
   let s:iskeyword = &iskeyword
