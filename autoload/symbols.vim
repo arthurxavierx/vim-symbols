@@ -24,7 +24,7 @@ function! symbols#load(...)
   let s:iskeyword = &iskeyword
   exe 'set iskeyword+=_,<,>,\(,\),[,],\{,\},\=,+,' . s:special_list
 
-  let filenames = split(globpath(&rtp, g:symbols_dir . '/' . name . '.{sym,txt}'), '\n')
+  let filenames = split(globpath(&rtp, g:symbols_dir . '/' . name . '.{sym,txt}', 1), '\n')
   if len(filenames) <= 0
     throw "No symbol set found for '" . name . "'"
   elseif len(filenames) > 1
