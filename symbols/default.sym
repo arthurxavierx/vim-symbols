@@ -121,10 +121,18 @@ partial: 𝜕
 increment: ∆
 
 integral: ∫ ∬ ∭ ∮ ∯ ∰
-join: ⋈ ⋉ ⋊ ⋋ ⋌ ⨝ ⟕ ⟖ ⟗ 
+join: ⋈ ⋉ ⋊ ⋋ ⋌ ⨝ ⟕ ⟖ ⟗
 
-< lbracket: ⟨ ⟦ ⟪
-> rbracket: ⟩ ⟧ ⟫
+< lbracket: ⟨ ⟦ ⟪ ⦇
+> rbracket: ⟩ ⟧ ⟫ ⦈
+
+ceil: ⌈ ⌉
+lceil: ⌈
+rceil: ⌉
+
+floor: ⌊ ⌋
+lfloor: ⌊
+rfloor: ⌋
 
 flat: ♭
 # sharp: ♯
