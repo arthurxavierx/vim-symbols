@@ -1,0 +1,274 @@
+" vim:fdm=marker:fdl=0:
+
+" Greek {{{
+Alpha GA: Α
+Beta GB: Β
+Gamma GG: Γ
+Delta GD: Δ
+Epsilon GE: Ε
+Zeta GZ: Ζ
+Eta GH: Η
+Theta GTH: Θ
+Iota GI: Ι
+Kappa GK: Κ
+Lambda GL: Λ
+Mu GM: Μ
+Nu GN: Ν
+Xi GX: Ξ
+Omicron GO: Ο
+Pi GP: Π
+Rho GR: Ρ
+Sigma GS: Σ
+Tau GT: Τ
+Upsilon GU: Υ
+Phi GF: Φ
+Chi GX: Χ
+Psi GPS: Ψ
+Omega GW: Ω
+
+alpha ga: α
+beta gb: β
+gamma gg: γ
+delta gd: δ
+epsilon ge: ε
+zeta gz: ζ
+eta gh: η
+theta gth: θ
+iota gi: ι
+kappa gk: κ
+lambda gl: λ
+mu gm: μ
+nu gn: ν
+xi gx: ξ
+omicron go: ο
+pi gp: π
+rho gr: ρ
+sigma gs: σ
+tau gt: τ
+upsilon gu: υ
+phi gf: φ
+chi gx: χ
+psi gps: ψ
+omega gw: ω
+" }}}
+
+" Shapes {{{
+box square: □ ■ ▫ ▪
+lozenge diamond: ◇ ◆ ◊
+circle: ○ ● ◌
+triangle: △ ▲ ▵ ▴ ▷ ▸ ▽ ▼ ◃ ◂
+star: ⋆ ★ ☆ ✦ ✧ ✪ ✶ ✷ ✹
+" }}}
+
+die: ⚀ ⚁ ⚂ ⚃ ⚄ ⚅
+
+dagger: † ‡
+' prime: ′ ″ ‴ ⁗
+
++- pm: ± ∓
+-+ mp: ∓
+
+sum: ∑
+prod: ∏ ∐
+coprod: ∐
+
+forall all fa: ∀
+exists: ∃ ∄
+
+empty: ∅
+in: ∈ ∉
+
+intersection cap: ∩ ⋂ ⊓ ⨅
+union cup: ∪ ⋃ ⊔ ⨆ ⊎ ⊍ ⨄ ⨃
+
+subset: ⊂ ⊄ ⊆ ⊈
+supset: ⊃ ⊅ ⊇ ⊉
+
+squb: ⊏ ⊑ ⋢
+squp: ⊐ ⊒ ⋣
+sqcup: ⊔ ⨆
+sqcap: ⊓ ⨅
+
+and: ∧ ⋀
+or: ∨ ⋁
+neg not: ¬
+
+top: ⊤
+bot: ⊥
+
+multimap: ⊸
+parr: ⅋
+
+therefore: ∴
+because: ∵
+
+qed: ∎
+ast: ∗
+times: ×
+div: ÷
+o comp: ∘
+. dot: ∙
+bullet: •
+sqrt: √
+sqrt3: ∛
+sqrt4: ∜
+inf: ∞
+propto: ∝
+pitchfork: ⋔
+
+nabla grad: ∇
+partial: 𝜕
+increment: ∆
+
+integral: ∫ ∬ ∭ ∮ ∯ ∰
+join: ⋈ ⋉ ⋊ ⋋ ⋌ ⨝ ⟕ ⟖ ⟗ 
+
+< lbracket: ⟨ ⟦ ⟪
+> rbracket: ⟩ ⟧ ⟫
+
+flat: ♭
+# sharp: ♯
+
+" Equality {{{
+= eq: ∼ ≃ ≅ ≈
+=n neq: ≠ ≁ ≄ ≇ ≉
+<= leq: ≤
+<=n leqn: ≰
+>= geq: ≥
+>=n geqn: ≱
+
+  ≡⟨ cong-n ≅ b ⟩
+
+sim: ∼ ≁ ≃ ≄
+cong iso: ≅ ≇
+approx: ≈ ≉
+== equiv: ≡ ≢
+" }}}
+
+entails: ⊢ ⊬ ⊣ ⊩ ⊮ ⊫ ⊯
+models: ⊨ ⊭
+
+" Circled operators {{{
+o+ oplus: ⊕
+o- ominus: ⊖
+ox otimes: ⊗
+o/ oslash: ⊘
+o. odot: ⊙
+o= oequal: ⊜
+ocirc: ⊚
+oast: ⊛
+
+O+ Oplus: ⨁
+Ox Otimes: ⨂
+O. Odot: ⨀
+" }}}
+
+" Box operators {{{
+b+ boxplus: ⊞
+b- boxminus: ⊟
+b* boxtimes: ⊠
+b. boxdot: ⊡
+" }}}
+
+... dots: … ⋯  ⋮ ⋰ ⋱
+
+" Arrows {{{
+to arrow right: → ⇒ ↦
+arrowleft left: ← ⇐
+arrowup up: ↑ ⇑
+arrowdown down: ↓ ⇓
+arrowleftright leftright: ↔ ⇔
+arrowupdown updown: ↕ ⇕
+arrownw: ↖ ⇖
+arrowne: ↗ ⇗
+arrowse: ↘ ⇘
+arrowsw: ↙ ⇙
+" }}}
+
+" Sets {{{
+bb booleans: 𝔹
+bn naturals: ℕ
+bz integers: ℤ
+bq rationals: ℚ
+bc complex: ℂ
+bh quaternions: ℍ
+bp primes: ℙ
+" }}}
+
+" Subscripts {{{
+_a: ₐ
+_e: ₑ
+_h: ₕ
+_i: ᵢ
+_j: ⱼ
+_k: ₖ
+_l: ₗ
+_m: ₘ
+_n: ₙ
+_o: ₒ
+_p: ₚ
+_r: ᵣ
+_s: ₛ
+_t: ₜ
+_u: ᵤ
+_v: ᵥ
+_x: ₓ
+_0: ₀
+_1: ₁
+_2: ₂
+_3: ₃
+_4: ₄
+_5: ₅
+_6: ₆
+_7: ₇
+_8: ₈
+_9: ₉
+_+: ₊
+_-: ₋
+_=: ₌
+_(: ₍
+_): ₎
+" }}}
+
+" Superscripts {{{
+^a: ᵃ ᴬ
+^b: ᵇ ᴮ
+^c: ᶜ
+^d: ᵈ ᴰ
+^e: ᵉ ᴱ
+^f: ᶠ
+^g: ᵍ ᴳ
+^h: ʰ ᴴ
+^i: ⁱ ᴵ
+^j: ʲ ᴶ
+^k: ᵏ ᴷ
+^l: ˡ ᴸ
+^m: ᵐ ᴹ
+^n: ⁿ ᴺ
+^o: ᵒ ᴼ
+^p: ᵖ ᴾ
+^r: ʳ ᴿ
+^s: ˢ
+^t: ᵗ ᵀ
+^u: ᵘ ᵁ
+^v: ᵛ ⱽ
+^w: ʷ ᵂ
+^x: ˣ
+^y: ʸ
+^z: ᶻ
+^0: ⁰
+^1: ¹
+^2: ²
+^3: ³
+^4: ⁴
+^5: ⁵
+^6: ⁶
+^7: ⁷
+^8: ⁸
+^9: ⁹
+^+: ⁺
+^-: ⁻
+^=: ⁼
+^(: ⁽
+^): ⁾
+" }}}
