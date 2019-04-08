@@ -2,7 +2,7 @@
 " File:         autoload/symbols.vim
 " Author:       Arthur Xavier <arthur.xavierx@gmail.com>
 " Description:  Insert special characters with Vim's native completion.
-" License:      GLPv3+
+" License:      GPLv3+
 " ------------------------------------------------------------------------------
 
 let s:symbols = []
