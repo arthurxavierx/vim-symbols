@@ -7,27 +7,22 @@
 
 " Defaults {{{
 
-" TODO: write documentation.
 if !exists('g:symbols_dir')
   let g:symbols_dir = 'symbols'
 endif
 
-" TODO: write documentation.
 if !exists('g:symbols_default_set')
   let g:symbols_default_set = 'default'
 endif
 
-" TODO: write documentation.
 if !exists('g:symbols_character')
   let g:symbols_character = '\'
 endif
 
-" TODO: write documentation.
 if !exists('g:symbols_user_completion')
   let g:symbols_user_completion = 0
 endif
 
-" TODO: write documentation.
 if !exists('g:symbols_auto_trigger')
   let g:symbols_auto_trigger = 1
 endif
