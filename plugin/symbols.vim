@@ -71,7 +71,7 @@ endfunction
 " Attempt to trigger auto-refreshing symbol completion.
 function! s:SymbolsComplete()
   let start = symbols#complete(1, '')
-  let end = col('.')
+  let end = max([0, col('.') - 2])
 
   let line = getline('.')
   let base = line[start:end]
