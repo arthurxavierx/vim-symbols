@@ -17,8 +17,9 @@ autocmd InsertEnter * let s:iskeyword = &iskeyword
 autocmd InsertLeave * let &iskeyword = s:iskeyword
 autocmd CompleteDone * let &iskeyword = s:iskeyword
 
+" TODO: write documentation.
 function! symbols#load(...)
-  let name = get(a:, '1', g:default_symbol_set)
+  let name = get(a:, '1', g:symbols_default_set)
   let s:symbols = []
 
   let s:iskeyword = &iskeyword
@@ -43,20 +44,22 @@ function! symbols#load(...)
   echo 'Loaded ' . len(s:symbols) . ' symbols'
 endfunction
 
+" TODO: write documentation.
 function! symbols#list()
-  echo join(map(copy(s:symbols), {_, s -> '{ ' . s[0] . ' : ' . join(s[1], ' ') . ' }'}), ', ')
+  echo join(map(copy(s:symbols), {_, s -> s[0] . '    ' . join(s[1], ' ')}), "\n")
 endfunction
 
+" TODO: write documentation.
 function! symbols#complete(findstart, base)
   if a:findstart
     exe 'set iskeyword+=_,<,>,\(,\),[,],\{,\},\=,+,' . s:special_list
-    return max([0, searchpos('\\', 'bcnW', line('.'))[1] - 1])
+    return max([0, searchpos(g:symbols_character, 'bcnW', line('.'))[1] - 1])
   else
-    if match(a:base, '^\s*\\') == -1
+    if match(a:base, '^\s*' . g:symbols_character) == -1
       return []
     endif
 
-    let base = substitute(a:base, '^\s*\\', '', '')
+    let base = substitute(a:base, '^\s*' . g:symbols_character, '', '')
     let r = filter(copy(s:symbols), 'v:val[0] =~ "\\C\\%(^\\|\\s\\)" . escape(base, s:special)')
     return
       \ { 'words': s:flatmap(r, {v -> map(copy(v[1]), {_,word -> {'word': word, 'menu': '    '.v[0]}})})
@@ -66,8 +69,19 @@ function! symbols#complete(findstart, base)
   endif
 endfunction
 
+" TODO: write documentation.
+function symbols#completeSets(arg, cmd, cursor)
+  let files = split(globpath(&rtp, g:symbols_dir . '/' . a:arg . '*.{sym,txt}', 1), '\n')
+  return join(map(files, {_, f -> fnamemodify(f, ':t:r')}), '\n')
+endfunction
+
+" Helpers {{{
+
+" TODO: write documentation.
 function! s:flatmap(list, f) abort
   let result = []
   let r = map(copy(a:list), {_,v -> extend(result, a:f(v))})
   return len(r) > 0 ? r[-1] : r
 endfunction
+
+" }}}
