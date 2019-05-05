@@ -19,12 +19,16 @@ if !exists('g:symbols_character')
   let g:symbols_character = '\'
 endif
 
-if !exists('g:symbols_user_completion')
-  let g:symbols_user_completion = 0
-endif
-
 if !exists('g:symbols_auto_trigger')
   let g:symbols_auto_trigger = 1
+endif
+
+if !exists('g:symbols_auto_load')
+  let g:symbols_auto_load = 1
+endif
+
+if !exists('g:symbols_user_completion')
+  let g:symbols_user_completion = 0
 endif
 
 " }}}
@@ -59,7 +63,9 @@ function s:Initialize()
           \ . g:symbols_character . ' '
           \ . g:symbols_character . '<Plug>SymbolsComplete'
   endif
-  call symbols#load()
+  if g:symbols_auto_load
+    call symbols#load()
+  endif
 endfunction
 
 " Attempt to trigger auto-refreshing symbol completion.

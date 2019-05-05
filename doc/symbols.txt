@@ -73,26 +73,31 @@ g:symbols_character     Prefix character used for identifying a symbol. In order
                               :let g:symbols_character = '\'
 <
 
-                                             *g:symbols_user_completion*
-g:symbols_user_completion
-                        When set to 1, |'completefunc'| is used for
-                        completing symbols.
-                        Default value: >
-                              :let g:symbols_user_completion = 0
-<
-
                                                 *g:symbols_auto_trigger*
 g:symbols_auto_trigger  When set to 1, inserting the character defined by
                         |g:symbols_character| automatically triggers symbol
-                        completion. Please mind that, when
-                        |g:symbols_user_completion| is set to false, typing
-                        any character will close the completion menu.
+                        completion.
 
                         ~IMPORTANT~: Setting this option to 1 runs >
                               :set completeopt+=noselect
 <
                         Default value: >
                               :let g:symbols_auto_trigger = 1
+<
+
+                                                   *g:symbols_auto_load*
+g:symbols_auto_load     When set to 1, the |g:symbols_default_set| is loaded
+                        when initializing Vim.
+                        Default value: >
+                              :let g:symbols_auto_load = 1
+<
+
+                                             *g:symbols_user_completion*
+g:symbols_user_completion
+                        When set to 1, |'completefunc'| is used for
+                        completing symbols.
+                        Default value: >
+                              :let g:symbols_user_completion = 0
 <
 
 ==============================================================================
