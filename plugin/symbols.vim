@@ -24,7 +24,7 @@ endif
 
 " TODO: write documentation.
 if !exists('g:symbols_user_completion')
-  let g:symbols_user_completion = 1
+  let g:symbols_user_completion = 0
 endif
 
 " TODO: write documentation.
@@ -37,35 +37,50 @@ endif
 command! -nargs=? -complete=custom,symbols#completeSets Symbols call symbols#load(<args>)
 command! SymbolsList call symbols#list()
 
+let s:symbols_completing = 0
+
 augroup Symbols
   autocmd!
   autocmd VimEnter * silent call s:Initialize()
+
+  " Setup user completion.
   autocmd BufEnter *
         \ if g:symbols_user_completion
         \ | set completefunc=symbols#complete
+        \ | endif
+
+  " Setup automatic refresh when not using user completion.
+  autocmd CompleteDone * let s:symbols_completing = 0
+  autocmd TextChangedI *
+        \ if !g:symbols_user_completion && s:symbols_completing
+        \ | call s:SymbolsComplete()
         \ | endif
 augroup END
 
 function s:Initialize()
   if g:symbols_auto_trigger
-    exe 'inoremap <expr> '
-          \ . g:symbols_character
-          \ . ' g:symbols_user_completion ? "\\\<C-x>\<C-u>" : "\\\<C-r>=CompleteSymbols()<CR>"'
+    set completeopt+=noselect
+    exe 'imap <silent> '
+          \ . g:symbols_character . ' '
+          \ . g:symbols_character . '<Plug>SymbolsComplete'
   endif
   call symbols#load()
 endfunction
 
-" TODO: write documentation.
-function! CompleteSymbols()
+" Attempt to trigger auto-refreshing symbol completion.
+function! s:SymbolsComplete()
   let start = symbols#complete(1, '')
   let end = col('.')
 
   let line = getline('.')
   let base = line[start:end]
 
-  if line[start] == '\'
-    echo start . ' ' . base
+  if line[start] == g:symbols_character
+    let s:symbols_completing = 1
     call complete(start + 1, symbols#complete(0, base).words)
   endif
   return ''
 endfunction
+
+inoremap <expr> <silent> <Plug>SymbolsComplete
+      \ g:symbols_user_completion ? "\<C-x>\<C-u>" : "\<C-r>=<SID>SymbolsComplete()\<CR>"
