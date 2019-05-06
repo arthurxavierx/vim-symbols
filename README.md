@@ -1,6 +1,8 @@
 # symbols.vim
 
-Insert special characters with Vim's native completion.
+Insert special characters while in _insert mode_ with Vim's native completion.
+
+![Screencast](https://raw.githubusercontent.com/arthurxavierx/vim-symbols/master/vim-symbols.gif)
 
 ## Table of contents
 
