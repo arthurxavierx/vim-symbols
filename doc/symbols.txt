@@ -95,7 +95,17 @@ g:symbols_auto_load     When set to 1, the |g:symbols_default_set| is loaded
                                              *g:symbols_user_completion*
 g:symbols_user_completion
                         When set to 1, |'completefunc'| is used for
-                        completing symbols.
+                        completing symbols starting with |g:symbols_character|.
+
+                        This option is useful for inserting symbols after a
+                        completion has ended. For example, suppose there
+                        exists a symbol definition `\_s` (and
+                        |g:symbols_character| is `'\'`). If there exists in
+                        the current buffer a word `\_s`, by positioning the
+                        cursor right after this word and pressing
+                        CTRL-X CTRL-U (see |i_CTRL-X_CTRL-U|), the symbol completion
+                        popup appears and the symbol is replaced.
+
                         Default value: >
                               :let g:symbols_user_completion = 0
 <
