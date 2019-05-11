@@ -4,6 +4,8 @@ Insert special characters while in _insert mode_ with Vim's native completion.
 
 ![Screencast](https://raw.githubusercontent.com/arthurxavierx/vim-symbols/master/vim-symbols.gif)
 
+`vim-symbols` is best served with [MUcomplete](https://github.com/lifepillar/vim-mucomplete).
+
 ## Table of contents
 
 1. [Installation](#installation)
