@@ -198,6 +198,7 @@ bb booleans: 𝔹
 bn naturals: ℕ
 bz integers: ℤ
 bq rationals: ℚ
+br reals: ℝ
 bc complex: ℂ
 bh quaternions: ℍ
 bp primes: ℙ
